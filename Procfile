@@ -1,1 +1,1 @@
-web: cd 03_scripts && gunicorn app:app
+web: cd 03_scripts && gunicorn api:app
