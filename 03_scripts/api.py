@@ -9,13 +9,6 @@ model = joblib.load('../04_modelos/best_RFC_model.pkl')
 # Inicializar o aplicativo Flask
 app = Flask(__name__)
 
-
-@app.route("/")
-def index():
-    """Rota padrão."""
-    return "Bem-vindo à API!"
-
-
 @app.route('/health', methods=['GET'])
 def health_check():
     """Verifica se o serviço está em execução."""
@@ -43,9 +36,5 @@ def predict():
     except Exception as e:
         return jsonify({'error': f'Ocorreu um erro: {str(e)}'}), 500
 
-if __name__ == '__main__':
-    try:
-        port = int(os.getenv("PORT", "5000"))
-        app.run(host="0.0.0.0", port=port)
-    except:
-        app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
