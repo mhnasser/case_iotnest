@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import joblib
 import numpy as np
 
-# Carregar o modelo pré-treinado
+# Carregar o modelo pré-treinado na seção 3
 model = joblib.load('../04_modelos/best_RFC_model.pkl')
 
 # Inicializar o aplicativo Flask
