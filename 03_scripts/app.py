@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import joblib
 import numpy as np
+import os
 
 # Carregar o modelo pré-treinado na seção 3
 model = joblib.load('../04_modelos/best_RFC_model.pkl')
@@ -37,7 +38,7 @@ def predict():
 
 if __name__ == '__main__':
     try:
-        port = int(os.getenv("PORT"), "5000")
+        port = int(os.getenv("PORT", "5000"))
         app.run(host="0.0.0.0", port=port)
     except:
         app.run(debug=True)
