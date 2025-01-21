@@ -9,6 +9,13 @@ model = joblib.load('../04_modelos/best_RFC_model.pkl')
 # Inicializar o aplicativo Flask
 app = Flask(__name__)
 
+
+@app.route("/")
+def index():
+    """Rota padrão."""
+    return "Bem-vindo à API!"
+
+
 @app.route('/health', methods=['GET'])
 def health_check():
     """Verifica se o serviço está em execução."""
