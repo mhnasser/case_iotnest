@@ -1,0 +1,9 @@
+Região,Categoria,Produto,Vendas
+Norte,Eletrônicos,TV,1500
+Norte,Móveis,Sofá,1200
+Sul,Eletrônicos,Celular,3000
+Sul,Móveis,Mesa,2000
+Leste,Eletrônicos,Notebook,2500
+Leste,Móveis,Cama,1800
+Oeste,Eletrônicos,Fone,1000
+Oeste,Móveis,Estante,1300
